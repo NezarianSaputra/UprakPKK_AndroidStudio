@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/biru">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            tools:ignore="MissingConstraints"
+            android:src="@drawable/sun"/>
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="Weather Report"
+            android:textSize="35dp"
+            app:layout_constraintLeft_toRightOf="@id/icon"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/birumuda"
+        android:paddingBottom="60dp">
+
+        <TextView
+            android:id="@+id/hari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:text="Today, April 21"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/derajat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hari"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:text="27°"
+            android:textSize="90dp"/>
+
+        <TextView
+            android:id="@+id/derajat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/derajat1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:text="21°"
+            android:textSize="40dp"/>
+
+        <ImageView
+            android:id="@+id/imgcuaca"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_toRightOf="@id/hari"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/cloudy"
+            android:background=""/>
+
+        <TextView
+            android:id="@+id/txtcuaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/hari"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/imgcuaca"
+            android:text="Cloudy"
+            android:textSize="40dp"/>
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp"
+        android:stretchColumns="1"
+        android:background="@color/birucerah">
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/cloud" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="09:00"
+                android:textSize="40dp"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/rain"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="10:00"
+                android:textSize="40dp"
+                android:gravity="center_vertical"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
